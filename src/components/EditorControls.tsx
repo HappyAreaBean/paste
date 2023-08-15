@@ -53,7 +53,7 @@ export default function EditorControls({
           pathname: pasteId,
         });
         copy(window.location.href);
-        document.title = 'paste | ' + pasteId;
+        document.title = 'pastebean | ' + pasteId;
       }
     });
   }, [actualContent, language, recentlySaved]);
@@ -88,7 +88,7 @@ export default function EditorControls({
       pathname: '/',
       hash: '',
     });
-    document.title = 'paste';
+    document.title = 'pastebean';
   }
 
   function unsetReadOnly() {
@@ -122,7 +122,7 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/lucko/paste#readme"
+          href="https://github.com/HappyAreaBean/pastebean#readme"
           target="_blank"
           rel="noreferrer"
         >

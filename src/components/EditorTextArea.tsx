@@ -69,7 +69,7 @@ export default function EditorTextArea({
   const onMount: OnMount = (editor, monaco) => {
     editor.addAction({
       id: 'search',
-      label: 'Search with Google',
+      label: 'Search with Duckduckgo',
       contextMenuGroupId: '9_cutcopypaste',
       contextMenuOrder: 5,
       run: editor => {
@@ -78,11 +78,12 @@ export default function EditorTextArea({
           const model = editor.getModel();
           if (model) {
             const query = model.getValueInRange(selection);
-            window.open('https://www.google.com/search?q=' + query, '_blank');
+            window.open('https://duckduckgo.com/?q=' + query, '_blank');
           }
         }
       },
-    });
+    }
+    );
 
     setEditor(editor);
     setMonaco(monaco);
